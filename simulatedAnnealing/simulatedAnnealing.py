@@ -29,9 +29,9 @@ def tweak(sol):
   R[i:j+1]=sol[i:j+1][::-1]
   return R
 
-def simulatedAnnealing(t0=1000,t1=0.001,a=0.9):
+def simulatedAnnealing(t0=1000,t1=0.001,a=0.9999):
 
-  S=np.arange(n)
+  S=np.random.permutation(n)
   best=S.copy()
   
   T=t0
